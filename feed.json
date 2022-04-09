@@ -1,0 +1,43 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "k",
+    "description": "",
+    "home_page_url": "https://sajal00gupta.github.io",
+    "feed_url": "https://sajal00gupta.github.io/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "j"
+    },
+    "items": [
+        {
+            "id": "https://sajal00gupta.github.io/fvdfgd.html",
+            "url": "https://sajal00gupta.github.io/fvdfgd.html",
+            "title": "fvdfgd",
+            "summary": "dbdfb bdfd fdfd fdb dfb",
+            "content_html": "<p>dbdfb</p>\n<p>bdfd</p>\n<p>fdfd</p>\n<p>fdb</p>\n<p>dfb</p>\n<p> </p>",
+            "image": "https://sajal00gupta.github.io/media/posts/2/dicision-tree-for-visualizations.png",
+            "author": {
+                "name": "j"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-04-09T22:17:37+05:30",
+            "date_modified": "2022-04-09T22:18:08+05:30"
+        },
+        {
+            "id": "https://sajal00gupta.github.io/njjk.html",
+            "url": "https://sajal00gupta.github.io/njjk.html",
+            "title": "njjk",
+            "summary": "m m m knjn nnjn",
+            "content_html": "<p>m m m knjn</p>\n<p>nnjn</p>",
+            "image": "https://sajal00gupta.github.io/media/posts/1/data-science-fields.png",
+            "author": {
+                "name": "j"
+            },
+            "tags": [
+            ],
+            "date_published": "2022-04-09T21:40:56+05:30",
+            "date_modified": "2022-04-09T22:16:46+05:30"
+        }
+    ]
+}

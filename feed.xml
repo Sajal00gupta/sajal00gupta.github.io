@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <title>k</title>
+    <link href="https://sajal00gupta.github.io/feed.xml" rel="self" />
+    <link href="https://sajal00gupta.github.io" />
+    <updated>2022-04-09T22:18:08+05:30</updated>
+    <author>
+        <name>j</name>
+    </author>
+    <id>https://sajal00gupta.github.io</id>
+
+    <entry>
+        <title>fvdfgd</title>
+        <author>
+            <name>j</name>
+        </author>
+        <link href="https://sajal00gupta.github.io/fvdfgd.html"/>
+        <id>https://sajal00gupta.github.io/fvdfgd.html</id>
+
+        <updated>2022-04-09T22:18:08+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sajal00gupta.github.io/media/posts/2/dicision-tree-for-visualizations.png" alt="" />
+                    dbdfb bdfd fdfd fdb dfb
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sajal00gupta.github.io/media/posts/2/dicision-tree-for-visualizations.png" alt="" />
+                <p>dbdfb</p>
+<p>bdfd</p>
+<p>fdfd</p>
+<p>fdb</p>
+<p>dfb</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title>njjk</title>
+        <author>
+            <name>j</name>
+        </author>
+        <link href="https://sajal00gupta.github.io/njjk.html"/>
+        <id>https://sajal00gupta.github.io/njjk.html</id>
+
+        <updated>2022-04-09T22:16:46+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sajal00gupta.github.io/media/posts/1/data-science-fields.png" alt="" />
+                    m m m knjn nnjn
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sajal00gupta.github.io/media/posts/1/data-science-fields.png" alt="" />
+                <p>m m m knjn</p>
+<p>nnjn</p>
+            ]]>
+        </content>
+    </entry>
+</feed>
