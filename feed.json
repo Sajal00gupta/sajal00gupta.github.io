@@ -10,49 +10,20 @@
     },
     "items": [
         {
-            "id": "https://sajal00gupta.github.io/dytfutf.html",
-            "url": "https://sajal00gupta.github.io/dytfutf.html",
-            "title": "dytfutf",
-            "summary": "Data Analysis using R ::: As the IPL 2022 fever is taking&hellip;",
-            "content_html": "<h1 id=\"data-analysis-using-r\">Data Analysis using R</h1>\n<p>::: \nAs the IPL 2022 fever is taking over the country; it is a great time for analyzing historic IPL matches data and answering questions from it.</p>\n<p>For this analysis we are using IPL data set from Kaggle which can be found <a href=\"https://www.kaggle.com/datasets/vora1011/ipl-2008-to-2021-all-match-dataset\">here</a>. This file contains historical records of IPL matches from 2008-2021.\n:::</p>\n<h2 id=\"import-data\">Import Data</h2>\n<p>Let’s import library needed for this job:</p>\n<pre><code class=\"language-{r\"># Tidyverse is a package containing libraries essential for analysis.\nlibrary(tidyverse)\n</code></pre>\n<h2 id=\"importing-csv-file\">Importing csv file</h2>\n<pre><code class=\"language-{r\">ipl_data &lt;- read_csv(&quot;IPL_Matches_2008_2021.csv&quot;) # dunction part of readr library included in tidyverse\n</code></pre>\n<h2 id=\"understanding-data\">Understanding Data</h2>\n<pre><code class=\"language-{r\">colnames(ipl_data) # column names\nhead(ipl_data) # view data\n</code></pre>\n<h2 id=\"data-cleaning\">Data Cleaning</h2>\n<p>Removing White spaces if any:</p>\n<pre><code class=\"language-{r\">ipl_data &lt;- as.data.frame(apply(ipl_data, 2, trimws))\n</code></pre>\n<p>If we look at data; in season column there are some entries 2020/2021 for 2021 season. In order to analyze data we need to standardized data in a particular format. WE need to replace such entries with appropriate year.</p>\n<pre><code class=\"language-{r\">ipl_data$Season &lt;- gsub(&quot;2020/21&quot;,&quot;2020&quot;,ipl_data$Season)\nipl_data$Season &lt;- gsub(&quot;2007/08&quot;,&quot;2008&quot;,ipl_data$Season)\nipl_data$Season &lt;- gsub(&quot;2009/10&quot;,&quot;2010&quot;,ipl_data$Season)\nipl_data$WinningTeam &lt;- gsub(&quot;Rising Pune Supergiantss&quot;,&quot;Rising Pune Supergiants&quot;,ipl_data$WinningTeam)\n</code></pre>\n<h1 id=\"visualizing-data\">Visualizing Data</h1>\n<p>Q1. Which team has won most matches in ipl history?</p>\n<pre><code class=\"language-{r}\">ggplot(subset(ipl_data, !is.na(WinningTeam))) + geom_bar(mapping = aes(y=WinningTeam), fill = &quot;LIGHTBLUE&quot;)+labs(title=&quot;Most Wins&quot;) + theme_classic()\n</code></pre>\n<p>Most wins in ipl history are for <strong>Mumbai Indians</strong> and second highest for <strong>Chennai super kings</strong>.</p>\n<p>Q2. Which team has won highest ipl trophies?</p>\n<pre><code class=\"language-{r}\">#filter data to get only final matches\nfinal &lt;- filter(ipl_data, MatchNumber == &quot;Final&quot;)\n#visualizing data\nggplot(final) + geom_bar(mapping = aes(y=WinningTeam), fill = &quot;LIGHTGREEN&quot;)+labs(title=&quot;Most Trophies By Team&quot;) + theme_classic()\n</code></pre>\n<p>The answer is <strong>Mumbai Indians</strong>.</p>\n<p>Q3. Which match venue has been the favorite?</p>\n<pre><code class=\"language-{r}\">#visualize\nggplot(subset(ipl_data, !is.na(City))) + \ngeom_bar(mapping = aes(y=City), fill = &quot;RED&quot;)+labs(title=&quot;Favorite Venue in IPL&quot;) + theme_classic()\n</code></pre>\n<p><strong>Mumbai</strong> is the financial capital of India as well as a great city and guess what it is also the most favorite for IPL matches.</p>\n<p>Q4. Which player got the player of the match title?</p>\n<pre><code class=\"language-{r\">#filtering data\ntop &lt;- ipl_data %&gt;% count(Player_of_Match, sort=TRUE) %&gt;% top_n(10)\n#visualizing\nggplot(top) + geom_col(mapping = aes(y=Player_of_Match, x=n), fill=&quot;ORANGE&quot;) + theme_classic()\n</code></pre>\n<p>It is my favorite <strong>AB de Villiers.</strong></p>\n",
+            "id": "https://sajal00gupta.github.io/ipl-data-analysis-using-r.html",
+            "url": "https://sajal00gupta.github.io/ipl-data-analysis-using-r.html",
+            "title": "IPL Data Analysis using R",
+            "summary": "Data Analysis using R As the IPL 2022 fever is taking over&hellip;",
+            "content_html": "<p><strong>Data Analysis using R </strong><br><br>As the IPL 2022 fever is taking over the country; it is a great time for analyzing historic IPL matches data and answering questions from it.<br><br>For this analysis we are using IPL data set from Kaggle which can be found [here](https://www.kaggle.com/datasets/vora1011/ipl-2008-to-2021-all-match-dataset). This file contains historical records of IPL matches from 2008-2021.<br>:::<br><br>## Import Data<br><br>Let's import library needed for this job:<br><br><code># Tidyverse is a package containing libraries essential for analysis.</code><br><code>library(tidyverse)</code><br><br>## Importing csv file<br><br><code>ipl_data &lt;- read_csv(\"IPL_Matches_2008_2021.csv\") # dunction part of readr library included in tidyverse</code><br><br>## Understanding Data<br><br><code>colnames(ipl_data) # column names</code><br><code>head(ipl_data) # view data</code><br><br>## Data Cleaning<br><br>Removing White spaces if any:<br><br><code>ipl_data &lt;- as.data.frame(apply(ipl_data, 2, trimws))</code><br><br>If we look at data; in season column there are some entries 2020/2021 for 2021 season. In order to analyze data we need to standardized data in a particular format. WE need to replace such entries with appropriate year.<br><br><code># Replace string</code><br><code>ipl_data$Season &lt;- gsub(\"2020/21\",\"2020\",ipl_data$Season)</code><br><code>ipl_data$Season &lt;- gsub(\"2007/08\",\"2008\",ipl_data$Season)</code><br><code>ipl_data$Season &lt;- gsub(\"2009/10\",\"2010\",ipl_data$Season)</code><br><code>ipl_data$WinningTeam &lt;- gsub(\"Rising Pune Supergiantss\",\"Rising Pune Supergiants\",ipl_data$WinningTeam)</code><br><br># Visualizing Data<br><br>Q1. Which team has won most matches in ipl history?<br><br><code>ggplot(subset(ipl_data, !is.na(WinningTeam))) + geom_bar(mapping = aes(y=WinningTeam), fill = \"LIGHTBLUE\")+labs(title=\"Most Wins\") + theme_classic()</code><br><br>Most wins in ipl history are for **Mumbai Indians** and second highest for **Chennai super kings**.<br><br>Q2. Which team has won highest ipl trophies?<br><br><code>#filter data to get only final matches</code><br><code>final &lt;- filter(ipl_data, MatchNumber == \"Final\")</code><br><code>#visualizing data</code><br><code>ggplot(final) + geom_bar(mapping = aes(y=WinningTeam), fill = \"LIGHTGREEN\")+labs(title=\"Most Trophies By Team\") + theme_classic()</code><br><br>The answer is **Mumbai Indians**.<br><br>Q3. Which match venue has been the favorite?<br><br><code>#visualize</code><br><code>ggplot(subset(ipl_data, !is.na(City))) + </code><br><code>geom_bar(mapping = aes(y=City), fill = \"RED\")+labs(title=\"Favorite Venue in IPL\") + theme_classic()</code><br><br>**Mumbai** is the financial capital of India as well as a great city and guess what it is also the most favorite for IPL matches.<br><br>Q4. Which player got the player of the match title?<br><br><code>#filtering data</code><br><code>top &lt;- ipl_data %&gt;% count(Player_of_Match, sort=TRUE) %&gt;% top_n(10)</code><br><code>#visualizing</code><br><code>ggplot(top) + geom_col(mapping = aes(y=Player_of_Match, x=n), fill=\"ORANGE\") + theme_classic()</code><br><br>It is my favorite **AB de Villiers.**</p>",
+            "image": "https://sajal00gupta.github.io/media/posts/6/ipl.jpeg",
             "author": {
                 "name": "Sajal Gupta"
             },
             "tags": [
                    "Data Analysis"
             ],
-            "date_published": "2022-04-09T22:57:42+05:30",
-            "date_modified": "2022-04-10T04:50:31+05:30"
-        },
-        {
-            "id": "https://sajal00gupta.github.io/fvdfgd.html",
-            "url": "https://sajal00gupta.github.io/fvdfgd.html",
-            "title": "fvdfgd",
-            "summary": "dbdfb bdfd fdfd fdb dfb",
-            "content_html": "<p>dbdfb</p>\n<p>bdfd</p>\n<p>fdfd</p>\n<p>fdb</p>\n<p>dfb</p>\n<p> </p>",
-            "image": "https://sajal00gupta.github.io/media/posts/2/dicision-tree-for-visualizations.png",
-            "author": {
-                "name": "Sajal Gupta"
-            },
-            "tags": [
-            ],
-            "date_published": "2022-04-09T22:17:37+05:30",
-            "date_modified": "2022-04-09T22:18:08+05:30"
-        },
-        {
-            "id": "https://sajal00gupta.github.io/njjk.html",
-            "url": "https://sajal00gupta.github.io/njjk.html",
-            "title": "njjk",
-            "summary": "m m m knjn nnjn",
-            "content_html": "<p>m m m knjn</p>\n<p>nnjn</p>",
-            "image": "https://sajal00gupta.github.io/media/posts/1/data-science-fields.png",
-            "author": {
-                "name": "Sajal Gupta"
-            },
-            "tags": [
-            ],
-            "date_published": "2022-04-09T21:40:56+05:30",
-            "date_modified": "2022-04-09T22:16:46+05:30"
+            "date_published": "2022-04-10T06:42:16+05:30",
+            "date_modified": "2022-04-10T06:49:25+05:30"
         }
     ]
 }
