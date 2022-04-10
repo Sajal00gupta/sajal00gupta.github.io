@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title>k</title>
+    <title>My Portfolio</title>
     <link href="https://sajal00gupta.github.io/feed.xml" rel="self" />
     <link href="https://sajal00gupta.github.io" />
-    <updated>2022-04-09T22:57:42+05:30</updated>
+    <updated>2022-04-10T04:50:31+05:30</updated>
     <author>
-        <name>j</name>
+        <name>Sajal Gupta</name>
     </author>
     <id>https://sajal00gupta.github.io</id>
 
     <entry>
         <title>dytfutf</title>
         <author>
-            <name>j</name>
+            <name>Sajal Gupta</name>
         </author>
         <link href="https://sajal00gupta.github.io/dytfutf.html"/>
         <id>https://sajal00gupta.github.io/dytfutf.html</id>
+            <category term="Data Analysis"/>
 
-        <updated>2022-04-09T22:57:42+05:30</updated>
+        <updated>2022-04-10T04:50:31+05:30</updated>
             <summary>
                 <![CDATA[
                     Data Analysis using R ::: As the IPL 2022 fever is taking&hellip;
@@ -84,7 +85,7 @@ ggplot(top) + geom_col(mapping = aes(y=Player_of_Match, x=n), fill=&quot;ORANGE&
     <entry>
         <title>fvdfgd</title>
         <author>
-            <name>j</name>
+            <name>Sajal Gupta</name>
         </author>
         <link href="https://sajal00gupta.github.io/fvdfgd.html"/>
         <id>https://sajal00gupta.github.io/fvdfgd.html</id>
@@ -111,7 +112,7 @@ ggplot(top) + geom_col(mapping = aes(y=Player_of_Match, x=n), fill=&quot;ORANGE&
     <entry>
         <title>njjk</title>
         <author>
-            <name>j</name>
+            <name>Sajal Gupta</name>
         </author>
         <link href="https://sajal00gupta.github.io/njjk.html"/>
         <id>https://sajal00gupta.github.io/njjk.html</id>
