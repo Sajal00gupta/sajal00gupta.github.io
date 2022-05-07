@@ -3,7 +3,7 @@
     <title>My Portfolio</title>
     <link href="https://sajal00gupta.github.io/feed.xml" rel="self" />
     <link href="https://sajal00gupta.github.io" />
-    <updated>2022-05-07T21:20:08+05:30</updated>
+    <updated>2022-05-07T21:29:42+05:30</updated>
     <author>
         <name>Sajal Gupta</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://sajal00gupta.github.io/exploratery-data-analysis-retail.html"/>
         <id>https://sajal00gupta.github.io/exploratery-data-analysis-retail.html</id>
 
-        <updated>2022-05-07T21:20:08+05:30</updated>
+        <updated>2022-05-07T21:29:42+05:30</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sajal00gupta.github.io/media/posts/7/0_x1zBLby0DoFDGa8v.png" alt="" />
@@ -213,7 +213,7 @@ labs(title="Shipmode and Segments", x="Ship Modes")</pre>
 store_data %&gt;% group_by(state) %&gt;% summarise(profit=sum(profit)) %&gt;% slice_max(profit,n=10) %&gt;% 
 ggplot() + geom_col(mapping=aes(y=state,x=profit), fill="lightblue") + theme_classic() +
 labs(title="Top 10 States by Profit", x="Total Profit", y="State")</pre>
-<figure class="post__image post__image--center"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/__results___14_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-lg.png 1024w"  alt="" width="494" height="494"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/2.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/2-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/2-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/2-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/2-lg.png 1024w"  alt="" width="447" height="447"></figure>
 <blockquote>
 <h4 id="California-and-newyork-are-top-states-with-most-profit.">California and newyork are top states with most profit.</h4>
 </blockquote>
@@ -223,7 +223,7 @@ df &lt;- store_data %&gt;% group_by(state) %&gt;% summarise(profit=sum(profit)) 
 df$profit &lt;- abs(df$profit)
 ggplot(df) + geom_col(mapping=aes(y=state,x=profit), fill="RED") + theme_classic() +
 labs(title="Top 10 Losses by State", x="Total Loss(-)", y="State")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___17_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-lg.png 1024w"  alt="" width="583" height="583"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/3.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/3-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/3-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/3-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/3-lg.png 1024w"  alt="" width="462" height="462"></figure>
 <blockquote>
 <h4 id="Orgeon-and-Florida-are-top-states-with-most-Losses.">Orgeon and Florida are top states with most Losses.</h4>
 </blockquote>
@@ -233,7 +233,7 @@ labs(title="Top 10 Losses by State", x="Total Loss(-)", y="State")</pre>
 store_data %&gt;% group_by(city) %&gt;% summarise(profit=sum(profit)) %&gt;% slice_max(profit,n=10) %&gt;% 
 ggplot() + geom_col(mapping=aes(y=city,x=profit), fill="lightblue") + theme_classic() +
 labs(title="Top 10 Cities by Profit", x="Total Profit", y="City")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___20_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-lg.png 1024w"  alt="" width="568" height="568"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/4.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/4-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/4-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/4-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/4-lg.png 1024w"  alt="" width="460" height="460"></figure>
 <blockquote>
 <h4 id="Newyork-city-has-the-most-profit.">Newyork city has the most profit.</h4>
 </blockquote>
@@ -243,7 +243,7 @@ df &lt;- store_data %&gt;% group_by(city) %&gt;% summarise(profit=sum(profit)) %
 df$profit &lt;- abs(df$profit)
 ggplot(df) + geom_col(mapping=aes(y=city,x=profit), fill="RED") + theme_classic() +
 labs(title="Top 10 Losses by City", x="Total Loss(-)", y="City")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___23_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-lg.png 1024w"  alt="" width="575" height="575"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/5-2.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/5-2-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/5-2-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/5-2-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/5-2-lg.png 1024w"  alt="" width="467" height="467"></figure>
 <blockquote>
 <h4 id="Philadelphia-has-the-most-losses.">Philadelphia has the most losses.</h4>
 </blockquote>
@@ -259,21 +259,13 @@ labs(title="Top 10 Losses by City", x="Total Loss(-)", y="City")</pre>
 </div>
 <div>
 <div>
-<div>
-<div>
 <pre>#using ggplot2 to visualize the bar graph
 store_data %&gt;% group_by(region) %&gt;% summarise(profit=sum(profit)) %&gt;% 
 ggplot() + geom_col(mapping=aes(x=region,y=profit), fill="lightblue") + theme_classic() +
 labs(title="Profit by Region", y="Total Profit", x="Region")</pre>
 </div>
 <div>
-<div>
-<div>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___26_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-lg.png 1024w"  alt="" width="560" height="560"></p>
-</div>
-</div>
-</div>
-</div>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/6-2.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/6-2-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/6-2-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/6-2-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/6-2-lg.png 1024w"  alt="" width="490" height="490"></figure>
 </div>
 </div>
 <blockquote>
@@ -284,7 +276,7 @@ labs(title="Profit by Region", y="Total Profit", x="Region")</pre>
 store_data %&gt;% group_by(category) %&gt;% summarise(sales=sum(sales)) %&gt;% 
 ggplot() + geom_col(mapping=aes(x=category,y=sales), fill="green") + theme_classic() +
 labs(title="Most Sales by Category", y="Total Sales", x="Categories")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___29_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-lg.png 1024w"  alt="" width="571" height="571"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/7-2.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/7-2-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/7-2-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/7-2-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/7-2-lg.png 1024w"  alt="" width="470" height="470"></figure>
 <blockquote>
 <h4 id="Technology-has-the-most-sales.">Technology has the most sales.</h4>
 </blockquote>
@@ -293,7 +285,7 @@ labs(title="Most Sales by Category", y="Total Sales", x="Categories")</pre>
 store_data %&gt;% group_by(sub_category) %&gt;% summarise(sales=sum(sales)) %&gt;% 
 ggplot() + geom_col(mapping=aes(y=sub_category,x=sales), fill="Orange") + theme_classic() +
 labs(title="Sub-Category", x="Total Sales", y="Sub-Category")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___32_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-lg.png 1024w"  alt="" width="573" height="573"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/8.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/8-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/8-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/8-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/8-lg.png 1024w"  alt="" width="499" height="499"></figure>
 <blockquote>
 <h4 id="Phone-&amp;-Chairs-sub-categories-have-the-most-sales-and-Fasteners-have-the-least-sales-figures.">Phone &amp; Chairs sub-categories have the most sales and Fasteners have the least sales figures.</h4>
 </blockquote>
@@ -308,8 +300,8 @@ labs(title="Discount by Category", x="Category", y="Total Discount")
 store_data %&gt;% group_by(sub_category) %&gt;% summarise(discount=sum(discount)) %&gt;% 
 ggplot() + geom_col(mapping=aes(y=sub_category,x=discount), fill="purple") + theme_classic() +
 labs(title="Discount by Sub-Category", x="Sub-Category", y="Total Discount")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___35_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-lg.png 1024w"  alt="" width="581" height="581"></p>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___35_1.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-lg.png 1024w"  alt="" width="573" height="573"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/9.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/9-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/9-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/9-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/9-lg.png 1024w"  alt="" width="460" height="460"></figure>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/10-2.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/10-2-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/10-2-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/10-2-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/10-2-lg.png 1024w"  alt="" width="467" height="467"></figure>
 <blockquote>
 <h4 id="Office-supplies-has-given-most-discount-and-Technology-has-the-least-discounts-on-sales.">Office supplies has given most discount and Technology has the least discounts on sales.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#Office-supplies-has-given-most-discount-and-Technology-has-the-least-discounts-on-sales." target="_self" rel=" noreferrer nofollow"></a></h4>
 <h4 id="Binders-has-been-given-most-discount-and-copiers-least-in-sub-category.">Binders has been given most discount and copiers least in sub-category.</h4>
@@ -319,7 +311,7 @@ labs(title="Discount by Sub-Category", x="Sub-Category", y="Total Discount")</pr
 store_data %&gt;% group_by(category) %&gt;% summarise(profit=sum(profit)) %&gt;% 
 ggplot() + geom_col(mapping=aes(x=category,y=profit), fill="orange") + theme_classic() +
 labs(title="Profit by Category", x="Category", y="Total Profit")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___38_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-lg.png 1024w"  alt="" width="569" height="569"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/11.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/11-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/11-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/11-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/11-lg.png 1024w"  alt="" width="426" height="426"></figure>
 <blockquote>
 <h4 id="Most-profit-is-coming-from-Technogy-category-which-is-ovious-because-technology-products-have-most-profit-per-product.">Most profit is coming from Technogy category which is ovious because technology products have most profit per product.</h4>
 </blockquote>
@@ -327,7 +319,7 @@ labs(title="Profit by Category", x="Category", y="Total Profit")</pre>
 store_data %&gt;% group_by(sub_category) %&gt;% summarise(profit=sum(profit)) %&gt;% 
 ggplot() + geom_col(mapping=aes(y=sub_category,x=profit), fill="Red") + theme_classic() +
 labs(title="Profit by Sub_Category", y="Sub_Category", x="Total Profit")</pre>
-<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___40_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-lg.png 1024w"  alt="" width="564" height="564"></p>
+<figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/12.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/12-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/12-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/12-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/12-lg.png 1024w"  alt="" width="486" height="486"></figure>
 <blockquote>
 <h4 id="Copiers-have-the-most-profit-and-Tables-being-the-most-loss-making-products.">Copiers have the most profit and Tables being the most loss making products.</h4>
 </blockquote>
