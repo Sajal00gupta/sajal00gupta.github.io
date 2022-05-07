@@ -3,12 +3,362 @@
     <title>My Portfolio</title>
     <link href="https://sajal00gupta.github.io/feed.xml" rel="self" />
     <link href="https://sajal00gupta.github.io" />
-    <updated>2022-04-10T13:29:50+05:30</updated>
+    <updated>2022-05-07T17:04:56+05:30</updated>
     <author>
         <name>Sajal Gupta</name>
     </author>
     <id>https://sajal00gupta.github.io</id>
 
+    <entry>
+        <title>Exploratery Data Analysis - Retail</title>
+        <author>
+            <name>Sajal Gupta</name>
+        </author>
+        <link href="https://sajal00gupta.github.io/exploratery-data-analysis-retail.html"/>
+        <id>https://sajal00gupta.github.io/exploratery-data-analysis-retail.html</id>
+
+        <updated>2022-05-07T17:04:56+05:30</updated>
+            <summary>
+                <![CDATA[
+                        <img src="https://sajal00gupta.github.io/media/posts/7/images-1.jfif" alt="" />
+                    This task is the part of internship at The Sparks Foundation. #&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                    <img src="https://sajal00gupta.github.io/media/posts/7/images-1.jfif" alt="" />
+                <p>This task is the part of internship at The Sparks Foundation.</p>
+<h2 id="Let's-get-familiar-with-data">Let's get familiar with data</h2>
+<h4>Importing Data</h4>
+<pre># Let's import required libraries for our analysis
+library(tidyverse) # metapackage of all tidyverse packages
+
+
+# Reading CSV file
+store_data &lt;- read_csv("../input/retail-superstore/SampleSuperstore.csv")</pre>
+<pre>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
+
+✔ ggplot2 3.3.5     ✔ purrr   0.3.4
+✔ tibble  3.1.6     ✔ dplyr   1.0.8
+✔ tidyr   1.2.0     ✔ stringr 1.4.0
+✔ readr   2.1.2     ✔ forcats 0.5.1</pre>
+<pre>glimpse(store_data) # structure of data</pre>
+<pre>Rows: 9,994
+Columns: 13
+$ `Ship Mode`    &lt;chr&gt; "Second Class", "Second Class", "Second Class", "Standa…
+$ Segment        &lt;chr&gt; "Consumer", "Consumer", "Corporate", "Consumer", "Consu…
+$ Country        &lt;chr&gt; "United States", "United States", "United States", "Uni…
+$ City           &lt;chr&gt; "Henderson", "Henderson", "Los Angeles", "Fort Lauderda…
+$ State          &lt;chr&gt; "Kentucky", "Kentucky", "California", "Florida", "Flori…
+$ `Postal Code`  &lt;dbl&gt; 42420, 42420, 90036, 33311, 33311, 90032, 90032, 90032,…
+$ Region         &lt;chr&gt; "South", "South", "West", "South", "South", "West", "We…
+$ Category       &lt;chr&gt; "Furniture", "Furniture", "Office Supplies", "Furniture…
+$ `Sub-Category` &lt;chr&gt; "Bookcases", "Chairs", "Labels", "Tables", "Storage", "…
+$ Sales          &lt;dbl&gt; 261.9600, 731.9400, 14.6200, 957.5775, 22.3680, 48.8600…
+$ Quantity       &lt;dbl&gt; 2, 3, 2, 5, 2, 7, 4, 6, 3, 5, 9, 4, 3, 3, 5, 3, 6, 2, 2…
+$ Discount       &lt;dbl&gt; 0.00, 0.00, 0.00, 0.45, 0.20, 0.00, 0.00, 0.20, 0.20, 0…
+$ Profit         &lt;dbl&gt; 41.9136, 219.5820, 6.8714, -383.0310, 2.5164, 14.1694, …</pre>
+<pre>head(store_data) #to see snapshot of data</pre>
+<table><caption>A tibble: 6 × 13</caption>
+<thead>
+<tr>
+<th scope="col">Ship Mode</th>
+<th scope="col">Segment</th>
+<th scope="col">Country</th>
+<th scope="col">City</th>
+<th scope="col">State</th>
+<th scope="col">Postal Code</th>
+<th scope="col">Region</th>
+<th scope="col">Category</th>
+<th scope="col">Sub-Category</th>
+<th scope="col">Sales</th>
+<th scope="col">Quantity</th>
+<th scope="col">Discount</th>
+<th scope="col">Profit</th>
+</tr>
+<tr>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;dbl&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;chr&gt;</th>
+<th scope="col">&lt;dbl&gt;</th>
+<th scope="col">&lt;dbl&gt;</th>
+<th scope="col">&lt;dbl&gt;</th>
+<th scope="col">&lt;dbl&gt;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Second Class</td>
+<td>Consumer</td>
+<td>United States</td>
+<td>Henderson</td>
+<td>Kentucky</td>
+<td>42420</td>
+<td>South</td>
+<td>Furniture</td>
+<td>Bookcases</td>
+<td>261.9600</td>
+<td>2</td>
+<td>0.00</td>
+<td>41.9136</td>
+</tr>
+<tr>
+<td>Second Class</td>
+<td>Consumer</td>
+<td>United States</td>
+<td>Henderson</td>
+<td>Kentucky</td>
+<td>42420</td>
+<td>South</td>
+<td>Furniture</td>
+<td>Chairs</td>
+<td>731.9400</td>
+<td>3</td>
+<td>0.00</td>
+<td>219.5820</td>
+</tr>
+<tr>
+<td>Second Class</td>
+<td>Corporate</td>
+<td>United States</td>
+<td>Los Angeles</td>
+<td>California</td>
+<td>90036</td>
+<td>West</td>
+<td>Office Supplies</td>
+<td>Labels</td>
+<td>14.6200</td>
+<td>2</td>
+<td>0.00</td>
+<td>6.8714</td>
+</tr>
+<tr>
+<td>Standard Class</td>
+<td>Consumer</td>
+<td>United States</td>
+<td>Fort Lauderdale</td>
+<td>Florida</td>
+<td>33311</td>
+<td>South</td>
+<td>Furniture</td>
+<td>Tables</td>
+<td>957.5775</td>
+<td>5</td>
+<td>0.45</td>
+<td>-383.0310</td>
+</tr>
+<tr>
+<td>Standard Class</td>
+<td>Consumer</td>
+<td>United States</td>
+<td>Fort Lauderdale</td>
+<td>Florida</td>
+<td>33311</td>
+<td>South</td>
+<td>Office Supplies</td>
+<td>Storage</td>
+<td>22.3680</td>
+<td>2</td>
+<td>0.20</td>
+<td>2.5164</td>
+</tr>
+<tr>
+<td>Standard Class</td>
+<td>Consumer</td>
+<td>United States</td>
+<td>Los Angeles</td>
+<td>California</td>
+<td>90032</td>
+<td>West</td>
+<td>Furniture</td>
+<td>Furnishings</td>
+<td>48.8600</td>
+<td>7</td>
+<td>0.00</td>
+<td>14.1694</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+<h1 id="Data-Cleaning">Data Cleaning</h1>
+<h4 id="Fixing-the-column-names-for-better-analysis">Fixing the column names for better analysis</h4>
+<pre>library(janitor)
+store_data &lt;- clean_names(store_data)</pre>
+<pre>Attaching package: ‘janitor’
+
+
+The following objects are masked from ‘package:stats’:
+
+    chisq.test, fisher.test
+</pre>
+<h1 id="Analysis-and-Visualisation">Analysis and Visualisation</h1>
+<p> </p>
+<p>Q1. How many ship modes and corresponding segments are there?</p>
+<pre>#using ggplot2 to visualize the bar graph
+ggplot(store_data) + geom_bar(mapping=aes(x=ship_mode, fill=segment)) + theme_classic() +
+labs(title="Shipmode and Segments", x="Ship Modes")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___11_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___11_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___11_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___11_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___11_0-lg.png 1024w"  alt="" width="612" height="612"></p>
+<blockquote>
+<h4 id="Graph-tells-that-there-are-4-types-of-ship-modes-and-3-segments.">Graph tells that there are 4 types of ship modes and 3 segments.</h4>
+</blockquote>
+<p> </p>
+<p>Q2. Which state has the the most profit?</p>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(state) %&gt;% summarise(profit=sum(profit)) %&gt;% slice_max(profit,n=10) %&gt;% 
+ggplot() + geom_col(mapping=aes(y=state,x=profit), fill="lightblue") + theme_classic() +
+labs(title="Top 10 States by Profit", x="Total Profit", y="State")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___14_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___14_0-lg.png 1024w"  alt="" width="599" height="599"></p>
+<blockquote>
+<h4 id="California-and-newyork-are-top-states-with-most-profit.">California and newyork are top states with most profit.</h4>
+</blockquote>
+<p>Q3. states who have the the most losses?</p>
+<pre>#using ggplot2 to visualize the bar graph
+df &lt;- store_data %&gt;% group_by(state) %&gt;% summarise(profit=sum(profit)) %&gt;% slice_min(profit,n=10)
+df$profit &lt;- abs(df$profit)
+ggplot(df) + geom_col(mapping=aes(y=state,x=profit), fill="RED") + theme_classic() +
+labs(title="Top 10 Losses by State", x="Total Loss(-)", y="State")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___17_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___17_0-lg.png 1024w"  alt="" width="583" height="583"></p>
+<blockquote>
+<h4 id="Orgeon-and-Florida-are-top-states-with-most-Losses.">Orgeon and Florida are top states with most Losses.</h4>
+</blockquote>
+<p> </p>
+<p>Q4. Top cities with most profit?</p>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(city) %&gt;% summarise(profit=sum(profit)) %&gt;% slice_max(profit,n=10) %&gt;% 
+ggplot() + geom_col(mapping=aes(y=city,x=profit), fill="lightblue") + theme_classic() +
+labs(title="Top 10 Cities by Profit", x="Total Profit", y="City")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___20_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___20_0-lg.png 1024w"  alt="" width="568" height="568"></p>
+<blockquote>
+<h4 id="Newyork-city-has-the-most-profit.">Newyork city has the most profit.</h4>
+</blockquote>
+<p>Q5. Which city has the most losses?</p>
+<pre>#using ggplot2 to visualize the bar graph
+df &lt;- store_data %&gt;% group_by(city) %&gt;% summarise(profit=sum(profit)) %&gt;% slice_min(profit,n=10)
+df$profit &lt;- abs(df$profit)
+ggplot(df) + geom_col(mapping=aes(y=city,x=profit), fill="RED") + theme_classic() +
+labs(title="Top 10 Losses by City", x="Total Loss(-)", y="City")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___23_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___23_0-lg.png 1024w"  alt="" width="575" height="575"></p>
+<blockquote>
+<h4 id="Philadelphia-has-the-most-losses.">Philadelphia has the most losses.</h4>
+</blockquote>
+<p> </p>
+<div>
+<div>
+<div>
+<div>
+<p>Q6. Which Region has most profit?</p>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(region) %&gt;% summarise(profit=sum(profit)) %&gt;% 
+ggplot() + geom_col(mapping=aes(x=region,y=profit), fill="lightblue") + theme_classic() +
+labs(title="Profit by Region", y="Total Profit", x="Region")</pre>
+</div>
+<div>
+<div>
+<div>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___26_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___26_0-lg.png 1024w"  alt="" width="560" height="560"></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<blockquote>
+<h4 id="West-has-most-profit.">West has most profit.</h4>
+</blockquote>
+<p>Q7. Which category has the most sales?</p>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(category) %&gt;% summarise(sales=sum(sales)) %&gt;% 
+ggplot() + geom_col(mapping=aes(x=category,y=sales), fill="green") + theme_classic() +
+labs(title="Most Sales by Category", y="Total Sales", x="Categories")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___29_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___29_0-lg.png 1024w"  alt="" width="571" height="571"></p>
+<blockquote>
+<h4 id="Technology-has-the-most-sales.">Technology has the most sales.</h4>
+</blockquote>
+<p>Q8. Which Sub-Categoty has the most and least sales?</p>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(sub_category) %&gt;% summarise(sales=sum(sales)) %&gt;% 
+ggplot() + geom_col(mapping=aes(y=sub_category,x=sales), fill="Orange") + theme_classic() +
+labs(title="Sub-Category", x="Total Sales", y="Sub-Category")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___32_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___32_0-lg.png 1024w"  alt="" width="573" height="573"></p>
+<blockquote>
+<h4 id="Phone-&amp;-Chairs-sub-categories-have-the-most-sales-and-Fasteners-have-the-least-sales-figures.">Phone &amp; Chairs sub-categories have the most sales and Fasteners have the least sales figures.</h4>
+</blockquote>
+<p>Q9. Which Category and Sub-category has been given most and least discounts?</p>
+<pre>#using ggplot2 to visualize the bar graph
+# For Category
+store_data %&gt;% group_by(category) %&gt;% summarise(discount=sum(discount)) %&gt;% 
+ggplot() + geom_col(mapping=aes(x=category,y=discount), fill="orange") + theme_classic() +
+labs(title="Discount by Category", x="Category", y="Total Discount")
+#using ggplot2 to visualize the bar graph
+# For Sub-Category
+store_data %&gt;% group_by(sub_category) %&gt;% summarise(discount=sum(discount)) %&gt;% 
+ggplot() + geom_col(mapping=aes(y=sub_category,x=discount), fill="purple") + theme_classic() +
+labs(title="Discount by Sub-Category", x="Sub-Category", y="Total Discount")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___35_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_0-lg.png 1024w"  alt="" width="581" height="581"></p>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___35_1.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___35_1-lg.png 1024w"  alt="" width="573" height="573"></p>
+<blockquote>
+<h4 id="Office-supplies-has-given-most-discount-and-Technology-has-the-least-discounts-on-sales.">Office supplies has given most discount and Technology has the least discounts on sales.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#Office-supplies-has-given-most-discount-and-Technology-has-the-least-discounts-on-sales." target="_self" rel=" noreferrer nofollow"></a></h4>
+<h4 id="Binders-has-been-given-most-discount-and-copiers-least-in-sub-category.">Binders has been given most discount and copiers least in sub-category.</h4>
+</blockquote>
+<p>Q10. Most profit and loss by Category and Sub-Category?</p>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(category) %&gt;% summarise(profit=sum(profit)) %&gt;% 
+ggplot() + geom_col(mapping=aes(x=category,y=profit), fill="orange") + theme_classic() +
+labs(title="Profit by Category", x="Category", y="Total Profit")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___38_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___38_0-lg.png 1024w"  alt="" width="569" height="569"></p>
+<blockquote>
+<h4 id="Most-profit-is-coming-from-Technogy-category-which-is-ovious-because-technology-products-have-most-profit-per-product.">Most profit is coming from Technogy category which is ovious because technology products have most profit per product.</h4>
+</blockquote>
+<pre>#using ggplot2 to visualize the bar graph
+store_data %&gt;% group_by(sub_category) %&gt;% summarise(profit=sum(profit)) %&gt;% 
+ggplot() + geom_col(mapping=aes(y=sub_category,x=profit), fill="Red") + theme_classic() +
+labs(title="Profit by Sub_Category", y="Sub_Category", x="Total Profit")</pre>
+<p><img loading="lazy" src="https://sajal00gupta.github.io/media/posts/7/__results___40_0.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/__results___40_0-lg.png 1024w"  alt="" width="564" height="564"></p>
+<blockquote>
+<h4 id="Copiers-have-the-most-profit-and-Tables-being-the-most-loss-making-products.">Copiers have the most profit and Tables being the most loss making products.</h4>
+</blockquote>
+<h1 id="Conclusions">Conclusions</h1>
+<h4 id="By-exploration-and-analysis-of-data,-here-are-some-of-the-conclutions:">By exploration and analysis of data, here are some of the conclutions:</h4>
+<p id="1.-There-are-4-types-of-ship-modes-and-3-segments.">1. There are 4 types of ship modes and 3 segments.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#1.-There-are-4-types-of-ship-modes-and-3-segments." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="2.-California-and-newyork-are-top-states-with-most-profit.">2. California and newyork are top states with most profit.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#2.-California-and-newyork-are-top-states-with-most-profit." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="3.-Orgeon-and-Florida-are-top-states-with-most-Losses.">3. Orgeon and Florida are top states with most Losses.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#3.-Orgeon-and-Florida-are-top-states-with-most-Losses." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="4.-Newyork-city-has-the-most-profit.">4. Newyork city has the most profit.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#4.-Newyork-city-has-the-most-profit." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="5.-Philadelphia-has-the-most-losses.">5. Philadelphia has the most losses.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#5.-Philadelphia-has-the-most-losses." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="6.-There-are-4-types-of-regions-and-West-has-most-profit-in-all.">6. There are 4 types of regions and West has most profit in all.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#6.-There-are-4-types-of-regions-and-West-has-most-profit-in-all." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="7.-Technology-has-the-most-sales.">7. Technology has the most sales.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#7.-Technology-has-the-most-sales." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="9.-Office-supplies-has-given-most-discount-and-Technology-has-the-least-discounts-on-sales.">9. Office supplies has given most discount and Technology has the least discounts on sales.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#9.-Office-supplies-has-given-most-discount-and-Technology-has-the-least-discounts-on-sales." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="10.-Binders-has-been-given-most-discount-and-copiers-least-in-sub-category.">10. Binders has been given most discount and copiers least in sub-category.</p>
+<p id="11.-Most-profit-is-coming-from-Technogy-category-which-is-ovious-because-technology-products-have--------------most-profit-per-product.">11. Most profit is coming from Technogy category which is ovious because technology products have most profit per product.<a href="https://www.kaggle.com/code/sajal00gupta/sparks-internship-task1#11.-Most-profit-is-coming-from-Technogy-category-which-is-ovious-because-technology-products-have--------------most-profit-per-product." target="_self" rel=" noreferrer nofollow"></a></p>
+<p id="12.-Copiers-have-the-most-profit-and-Tables-being-the-most-loss-making-products.">12. Copiers have the most profit and Tables being the most loss making products.</p>
+<p> </p>
+<h1 id="Recommendation">Recommendation</h1>
+<ul>
+<li>Top losses are coming from Oregeon and Florida states. There is a need for to focus more on such states for controlling losses.</li>
+<li>Pliladelphia and Houston cities have the most losses and there sholud be increased focus on such cities. (For detailed loss please see graph)</li>
+<li>Office supplies products have been given most discounts and there is a need to decrease it in rder to increase profits.</li>
+<li>Tables have the most loss making products. There should be increased focus on this area for better performance of business.</li>
+</ul>
+<p> </p>
+<p> </p>
+<p> </p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>IPL Data Analysis using R</title>
         <author>
