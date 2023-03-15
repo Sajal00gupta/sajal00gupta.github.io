@@ -3,7 +3,7 @@
     <title>Sajal Gupta</title>
     <link href="https://sajal00gupta.github.io/feed.xml" rel="self" />
     <link href="https://sajal00gupta.github.io" />
-    <updated>2022-05-07T21:33:51+05:30</updated>
+    <updated>2023-03-16T04:10:40+05:30</updated>
     <author>
         <name>Sajal Gupta</name>
     </author>
@@ -18,7 +18,7 @@
         <id>https://sajal00gupta.github.io/exploratery-data-analysis-retail.html</id>
             <category term="Data Analysis"/>
 
-        <updated>2022-05-07T21:33:51+05:30</updated>
+        <updated>2023-03-16T04:10:40+05:30</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sajal00gupta.github.io/media/posts/7/0_x1zBLby0DoFDGa8v.png" alt="" />
@@ -216,7 +216,7 @@ ggplot() + geom_col(mapping=aes(y=state,x=profit), fill="lightblue") + theme_cla
 labs(title="Top 10 States by Profit", x="Total Profit", y="State")</pre>
 <figure class="post__image"><img loading="lazy"  src="https://sajal00gupta.github.io/media/posts/7/2.png" sizes="(max-width: 1024px) 100vw, 1024px" srcset="https://sajal00gupta.github.io/media/posts/7/responsive/2-xs.png 300w ,https://sajal00gupta.github.io/media/posts/7/responsive/2-sm.png 480w ,https://sajal00gupta.github.io/media/posts/7/responsive/2-md.png 768w ,https://sajal00gupta.github.io/media/posts/7/responsive/2-lg.png 1024w"  alt="" width="447" height="447"></figure>
 <blockquote>
-<h4 id="California-and-newyork-are-top-states-with-most-profit.">California and newyork are top states with most profit.</h4>
+<h4 id="California-and-newyork-are-top-states-with-most-profit.">California and Newyork are top states with most profit.</h4>
 </blockquote>
 <p>Q3. states who have the the most losses?</p>
 <pre>#using ggplot2 to visualize the bar graph
@@ -342,7 +342,7 @@ labs(title="Profit by Sub_Category", y="Sub_Category", x="Total Profit")</pre>
 <ul>
 <li>Top losses are coming from Oregeon and Florida states. There is a need for to focus more on such states for controlling losses.</li>
 <li>Pliladelphia and Houston cities have the most losses and there sholud be increased focus on such cities. (For detailed loss please see graph)</li>
-<li>Office supplies products have been given most discounts and there is a need to decrease it in rder to increase profits.</li>
+<li>Office supplies products have been given most discounts and there is a need to decrease it in order to increase profits.</li>
 <li>Tables have the most loss making products. There should be increased focus on this area for better performance of business.</li>
 </ul>
 <p> </p>
