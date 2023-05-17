@@ -3,7 +3,7 @@
     <title>Sajal Gupta</title>
     <link href="https://sajal00gupta.github.io/feed.xml" rel="self" />
     <link href="https://sajal00gupta.github.io" />
-    <updated>2023-05-18T05:24:26+05:30</updated>
+    <updated>2023-05-18T05:29:30+05:30</updated>
     <author>
         <name>Sajal Gupta</name>
     </author>
@@ -17,7 +17,7 @@
         <link href="https://sajal00gupta.github.io/youtube-downloader-in-excel.html"/>
         <id>https://sajal00gupta.github.io/youtube-downloader-in-excel.html</id>
 
-        <updated>2023-05-18T05:24:26+05:30</updated>
+        <updated>2023-05-18T05:29:30+05:30</updated>
             <summary>
                 <![CDATA[
                         <img src="https://sajal00gupta.github.io/media/posts/8/Youtube-downloader-2-2.jpg" alt="" />
@@ -27,12 +27,12 @@
         <content type="html">
             <![CDATA[
                     <img src="https://sajal00gupta.github.io/media/posts/8/Youtube-downloader-2-2.jpg" alt="" />
-                <figure class="post__video"></figure>
-<p>- SUPPORTS SINGLE AND MULTIPLE FILES DOWNLOAD</p>
+                <p>- SUPPORTS SINGLE AND MULTIPLE FILES DOWNLOAD</p>
 <p>- UP TO 100 VIDEOS SUPPORT</p>
 <p>- USES yt-dlp DOWNLOADER TO DOWNLOAD VIDEOS</p>
 <p>- TWITCH AND VIMEO ALSO SUPPORTED</p>
-<iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/fKTQ9a0lo9E" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe>
+<p> </p>
+<div class="post__iframe"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/fKTQ9a0lo9E" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></div>
 <p>NOTICE - <strong>Downloading YouTube videos without permission is a violation of YouTube's terms of service. </strong></p>
             ]]>
         </content>
