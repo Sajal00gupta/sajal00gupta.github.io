@@ -12,9 +12,9 @@
         {
             "id": "https://sajal00gupta.github.io/youtube-downloader-in-excel.html",
             "url": "https://sajal00gupta.github.io/youtube-downloader-in-excel.html",
-            "title": "YOUTUBE DOWNLOADER IN EXCEL",
-            "summary": "- SUPPORTS SINGLE AND MULTIPLE FILES DOWNLOAD - UP TO 100 VIDEOS&hellip;",
-            "content_html": "<p>- SUPPORTS SINGLE AND MULTIPLE FILES DOWNLOAD</p>\n<p>- UP TO 100 VIDEOS SUPPORT</p>\n<p>- USES yt-dlp DOWNLOADER TO DOWNLOAD VIDEOS</p>\n<p>- TWITCH AND VIMEO ALSO SUPPORTED</p>\n<p> </p>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"314\" src=\"https://www.youtube.com/embed/fKTQ9a0lo9E\" allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\"></iframe></div>\n<p>NOTICE - <strong>Downloading YouTube videos without permission is a violation of YouTube's terms of service. </strong></p>",
+            "title": "Excel Youtube Downloader",
+            "summary": "This Youtube downloader uses a cmd based application yt-dlp to download videos.",
+            "content_html": "<p>This Youtube downloader uses a cmd based application yt-dlp to download videos. This application provides user friendly experience to user without having to use cmd line by interacting with yt-dp through batch files.</p>\n<p>Please find github page of yt-dlp <a href=\"https://github.com/yt-dlp/yt-dlp\" target=\"_blank\" rel=\"noopener noreferrer\">here</a></p>\n<p>Feature of Excel Yt Downloader -:</p>\n<p>- Supports Single And Multiple Files Download</p>\n<p>- Up To 100 Videos Support</p>\n<p>- Uses Yt-Dlp Downloader To Download Videos</p>\n<p>- Twitch And Vimeo Also Supported</p>\n<p> </p>\n<div class=\"post__iframe\"><iframe loading=\"lazy\" width=\"560\" height=\"314\" src=\"https://www.youtube.com/embed/fKTQ9a0lo9E\" allowfullscreen=\"allowfullscreen\" data-mce-fragment=\"1\"></iframe></div>\n<p>NOTICE - <strong>Downloading YouTube videos without permission is a violation of YouTube's terms of service. </strong></p>",
             "image": "https://sajal00gupta.github.io/media/posts/8/Youtube-downloader-2-2.jpg",
             "author": {
                 "name": "Sajal Gupta"
@@ -22,7 +22,7 @@
             "tags": [
             ],
             "date_published": "2023-05-18T05:09:35+05:30",
-            "date_modified": "2023-05-18T05:29:30+05:30"
+            "date_modified": "2023-05-18T09:33:27+05:30"
         },
         {
             "id": "https://sajal00gupta.github.io/exploratery-data-analysis-retail.html",
